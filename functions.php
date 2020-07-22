@@ -130,6 +130,10 @@ if ( ! function_exists( 'prefer_setup' ) ) :
         add_image_size('prefer-related-size', 600, 400, true); 
         add_image_size('prefer-promo-post', 800, 500, true); 
         add_image_size('prefer-related-post-thumbnails', 850, 550, true ); 
+
+
+        // Add support for Yoast SEO Breadcrumbs.
+        add_theme_support( 'yoast-seo-breadcrumbs' );
 	}
 endif;
 add_action( 'after_setup_theme', 'prefer_setup' );

@@ -74,7 +74,7 @@ final class Prefer_Customize {
 				'prefer_plus',
 				array(
 					'pro_text2' => esc_html__( 'Upgrade to Pro and Get More Features', 'prefer' ),
-					'pro_url2'  => 'https://www.templatesell.com/item/prefer-plus-grid-wordpress-theme/',
+					'pro_url2'  => 'https://www.templatesell.com/item/prefer-plus/',
 					'pro_text'  => esc_html__( 'Get Free Support', 'prefer' ),
 					'pro_url'   => 'https://www.templatesell.com/contact-us/',
 					'priority' => '1',

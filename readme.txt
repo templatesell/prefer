@@ -30,6 +30,13 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.1 - July 22 2020 =
+* Fixed breadcrumb issues
+* Added breadcrumb for plugin support
+* Added theme info page
+* Added upgrade to pro 
+* Added pro notice
+
 = 1.0.0 - July 16 2020 =
 * Initial release
 

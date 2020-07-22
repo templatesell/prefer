@@ -27,7 +27,7 @@
  * which should be used in theme templates.
  *
  * @since  0.1.0
- * @access prefer
+ * @access public
  * @param  array $args Arguments to pass to Breadcrumb_Trail.
  * @return string html output.
  */
@@ -45,7 +45,7 @@ function prefer_breadcrumb_trail( $args = array() ) {
  * Creates a breadcrumbs menu for the site based on the current page that's being viewed by the user.
  *
  * @since  0.6.0
- * @access prefer
+ * @access public
  */
 class Prefer_Breadcrumb_Trail {
 
@@ -53,37 +53,37 @@ class Prefer_Breadcrumb_Trail {
      * Array of items belonging to the current breadcrumb trail.
      *
      * @since  0.1.0
-     * @access prefer
+     * @access public
      * @var    array
      */
-    prefer $items = array();
+    public $items = array();
 
     /**
      * Arguments used to build the breadcrumb trail.
      *
      * @since  0.1.0
-     * @access prefer
+     * @access public 
      * @var    array
      */
-    prefer $args = array();
+    public $args = array();
 
     /**
      * Array of text labels.
      *
      * @since  1.0.0
-     * @access prefer
+     * @access public
      * @var    array
      */
-    prefer $labels = array();
+    public $labels = array();
 
     /**
      * Array of post types (key) and taxonomies (value) to use for single post views.
      *
      * @since  1.0.0
-     * @access prefer
+     * @access public
      * @var    array
      */
-    prefer $post_taxonomy = array();
+    public $post_taxonomy = array();
 
     /* ====== Magic Methods ====== */
 
@@ -92,10 +92,10 @@ class Prefer_Breadcrumb_Trail {
      * We'll just return the trail HTML.
      *
      * @since  1.0.0
-     * @access prefer
+     * @access public
      * @return string
      */
-    prefer function __toString() {
+    public function __toString() {
         return $this->trail();
     }
 
@@ -104,7 +104,7 @@ class Prefer_Breadcrumb_Trail {
      * to creat the array of breadcrumb items.
      *
      * @since  0.6.0
-     * @access prefer
+     * @access public
      * @param  array   $args  {
      *     @type string    $container      Container HTML element. nav|div
      *     @type string    $before         String to output before breadcrumb menu.
@@ -122,7 +122,7 @@ class Prefer_Breadcrumb_Trail {
      * }
      * @return void
      */
-    prefer function __construct( $args = array() ) {
+    public function __construct( $args = array() ) {
 
         $defaults = array(
             'container'       => 'nav',
@@ -151,16 +151,16 @@ class Prefer_Breadcrumb_Trail {
         $this->add_items();
     }
 
-    /* ====== Prefer Methods ====== */
+    /* ====== public Methods ====== */
 
     /**
      * Formats the HTML output for the breadcrumb trail.
      *
      * @since  0.6.0
-     * @access prefer
+     * @access public
      * @return string
      */
-    prefer function trail() {
+    public function trail() {
 
         // Set up variables that we'll need.
         $breadcrumb    = '';

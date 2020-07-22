@@ -32,7 +32,7 @@ function prefer_page() {
 			<div class="prefer-logo">
 				<img class="ts-logo" src="<?php echo esc_url( get_template_directory_uri() . '/templatesell/about/images/prefer-logo.png' ); ?>" alt="Logo">
 			</div>
-			<a href="https://www.templatesell.com/item/prefer-plus-masonry-wordpress-theme/" target="_blank" class="btn btn-success pull-right"><?php esc_html_e( 'Upgrade Pro $49', 'prefer' ); ?></a>
+			<a href="https://www.templatesell.com/item/prefer-plus/" target="_blank" class="btn btn-success pull-right"><?php esc_html_e( 'Upgrade Pro $49', 'prefer' ); ?></a>
 			<p>
 			<?php esc_html_e( 'A perfect theme for blog and magazine site. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme.', 'prefer' ); ?></p>
 			<a class="btn btn-primary" href="<?php echo esc_url (admin_url( '/customize.php?' ));

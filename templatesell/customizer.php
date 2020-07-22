@@ -64,6 +64,7 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
 
             /*Breadcrumb Options*/
             'prefer-extra-breadcrumb' => 1,
+            'prefer-breadcrumb-selection-option'=> 'theme-breadcrumb',
 
         );
 return apply_filters( 'prefer_default_theme_options_values', $default_theme_options );
