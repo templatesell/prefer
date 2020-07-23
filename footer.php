@@ -41,7 +41,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 
 ?>
 <?php if(is_active_sidebar('post-area')){ ?>
-<div class="post-area">
+<div class="post-area slider-below-widget-wrapper">
 	<div class="container">
 		<?php dynamic_sidebar( 'post-area' ); ?>
 	</div>

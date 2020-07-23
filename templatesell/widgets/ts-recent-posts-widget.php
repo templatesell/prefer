@@ -84,7 +84,8 @@ if (!class_exists('Prefer_Featured_Post')) :
                         <div class="widget_featured_content">
                                 <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 <div class="post-date">
-                                    <?php echo get_the_date(); ?>
+                                    <?php prefer_posted_on(); ?>
+
                                 </div><!-- .entry-meta -->
                         </div>
                     </li>

@@ -2200,7 +2200,7 @@ section.slider-wrapper {
 ***/
 
 .posts-container {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 20px;
     overflow: hidden;
 }
@@ -2525,7 +2525,7 @@ object {
 .post-title {
     margin: 10px 0 15px 0;
     font-size: 24px;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #000000;
 }
 .post-title a {
@@ -5550,6 +5550,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
     line-height: 1.2;
     color: #4c4f53;
 }
+.widget_featured_content .post-date a{
+    color: #989ea6;
+}
 .widget_bg_overlay {
     position: absolute;
     top: 0;
@@ -5680,6 +5683,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 .post-area .prefer-featured-post > ul > li:not(:last-child){
     margin-right: 20px
+}
+.post-area .widget_featured_post_num{
+    display: none;
 }
 @media (min-width: 991px){
     .post-area .prefer-featured-post > ul{
@@ -5819,7 +5825,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 .site-footer a:hover,
 .site-footer a:focus {
-    color: #EF9D87;
+    opacity: 0.7;
     text-decoration: underline !important;
 }
 .copyright {
@@ -5912,7 +5918,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 #toTop:hover {
     color: #ffffff;
-    background-color: #EF9D87;
+    opacity: 0.7;
 }
 #toTop:active i {
     position: relative;
@@ -6112,9 +6118,9 @@ div#prefer-breadcrumbs {
 .slider-below-widget-wrapper{
     margin-top: 30px;
 }
-.slider-below-widget-wrapper .widget{
-    background:#f4f4f4;
-    padding:40px;
+.slider-below-widget-wrapper .widget.widget_mc4wp_form_widget {
+    background: #f4f4f4;
+    padding: 40px;
 }
 .slider-below-widget-wrapper .widget .widget-title{
     background:transparent;

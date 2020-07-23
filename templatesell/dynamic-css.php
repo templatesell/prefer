@@ -23,7 +23,7 @@ if (!function_exists('prefer_dynamic_css')) :
         //Primary  Background 
         if (!empty($prefer_primary_color)) {
             $custom_css .= "
-            #toTop:hover,
+            #toTop,
             a.effect:before,
             .show-more,
             a.link-format,
@@ -80,6 +80,9 @@ if (!function_exists('prefer_dynamic_css')) :
             .footer-social-links a:hover,
             .footer-social-links a:focus,
             .site-footer a:hover, 
+            .post-cats > span i, 
+            .post-cats > span a,
+            .site-footer a,
             .site-footer a:focus, .content-area p a{ 
                 color : ". $prefer_primary_color."; 
             }";

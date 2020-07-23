@@ -67,7 +67,7 @@ if ( function_exists( 'wp_body_open' ) ) {
     <?php } ?>
     
     <?php if (is_active_sidebar('below-slider-area') && (is_home() || is_front_page())) { ?>
-        <section class="slider-below-widget-wrapper">
+        <section class="post-area slider-below-widget-wrapper">
             <div class="container">
                 <?php 
                 /*
