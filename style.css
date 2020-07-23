@@ -1001,7 +1001,10 @@ th {
     padding: 0;
     line-height: normal;
 }
-
+.main-header .logo h1 a {
+    font-size: 3rem;
+    line-height: 1.3;
+}
 .main-header .logo img {
     max-width: 100%;
     height: auto;
@@ -1642,10 +1645,19 @@ div#MobileMenu {
 .main-header.header-image .logo h1 a{
     color: #fff;
 }
+.main-header.header-image .logo h1 a {
+    font-size: 3rem;
+    line-height: 1.3;
+}
 .header-image .mobile-menu:before,
 .header-image .mobile-menu:after,
 .header-image .mobile-menu span{
     background: #fff;
+}
+@media (min-width: 992px) {
+    .main-menu ul li.dropdown_menu > a > span:before{
+        border-color: #fff;
+    }
 }
 @media (max-width: 991px) {
     .header-1 .header-image .main-menu ul{
@@ -3040,7 +3052,7 @@ a.link-format:hover {
     cursor: pointer;
     font-weight: 500;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     line-height: 2;
     text-transform: uppercase;
