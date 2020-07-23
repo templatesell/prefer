@@ -27,7 +27,10 @@ if (!function_exists('prefer_dynamic_css')) :
             a.effect:before,
             .show-more,
             a.link-format,
+            .comment-form #submit:hover, 
+            .comment-form #submit:focus,
             .tabs-nav li:before,
+            .footer-wrap .widget-title:after,
             .post-slider-section .s-cat,
             .sidebar-3 .widget-title:after,
             .bottom-caption .slick-current .slider-items span,
@@ -46,6 +49,26 @@ if (!function_exists('prefer_dynamic_css')) :
             }";
 
         }
+        if (!empty($prefer_primary_color)) {
+            $custom_css .= "
+            #author:active, 
+            #email:active, 
+            #url:active, 
+            #comment:active, 
+            #author:focus, 
+            #email:focus, 
+            #url:focus, 
+            #comment:focus,
+            #author:hover, 
+            #email:hover, 
+            #url:hover, 
+            #comment:hover{  
+                border-color: ".$prefer_primary_color.";
+            }";
+
+        }
+
+        
 
         //Primary Color
         if (!empty($prefer_primary_color)) {
@@ -83,6 +106,7 @@ if (!function_exists('prefer_dynamic_css')) :
             .post-cats > span i, 
             .post-cats > span a,
             .site-footer a,
+            .promo-three .post-category a,
             .site-footer a:focus, .content-area p a{ 
                 color : ". $prefer_primary_color."; 
             }";
