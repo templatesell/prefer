@@ -72,7 +72,7 @@ if (!class_exists('Prefer_Featured_Post')) :
                             if (has_post_thumbnail()) {
                                 ?>
                                     <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail('prefer-thumbnail-size'); ?>
+                                        <?php the_post_thumbnail('prefer-related-size'); ?>
                                         <div class="widget_bg_overlay"></div>
                                     </a>
 
