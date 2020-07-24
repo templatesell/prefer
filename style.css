@@ -1909,6 +1909,9 @@ section.slider-wrapper {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 }
+.modern-slider .slide-wrap .caption h2 a:hover{
+    text-decoration: underline;
+}
 .modern-slider .slide-wrap .entry-meta ul{
     position: absolute;
     left: 20px;
