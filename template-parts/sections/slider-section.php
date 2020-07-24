@@ -51,8 +51,7 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
             	<div class="caption">
                     <div class="inner-wrapper">
               		    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                      <div class="post-excerpt entry-content">
-                        <?php the_excerpt(); ?>
+                      <div class="btn-wrapper">
                         <a class="more-btn" href="<?php the_permalink(); ?>"><?php _e('Continue Reading', 'prefer'); ?></a>
                       </div>
                   </div>

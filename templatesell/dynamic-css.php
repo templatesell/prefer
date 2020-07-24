@@ -26,6 +26,7 @@ if (!function_exists('prefer_dynamic_css')) :
             #toTop,
             a.effect:before,
             .show-more,
+            .modern-slider .slide-wrap .more-btn,
             a.link-format,
             .comment-form #submit:hover, 
             .comment-form #submit:focus,
