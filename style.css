@@ -1910,7 +1910,7 @@ section.slider-wrapper {
     box-decoration-break: clone;
 }
 .modern-slider .slide-wrap .caption h2 a:hover{
-    text-decoration: underline;
+    text-decoration: underline!important;
 }
 .modern-slider .slide-wrap .entry-meta ul{
     position: absolute;
