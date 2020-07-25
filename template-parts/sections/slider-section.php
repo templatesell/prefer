@@ -47,7 +47,7 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
               </div>
               <!-- <div class="img-cover" style="background-image: url(<?php //echo esc_url($image_url[0]);?>)">
               </div> -->
-              <?php prefer_post_thumbnail('full'); ?>
+              <?php the_post_thumbnail('full'); ?>
             	<div class="caption">
                     <div class="inner-wrapper">
               		    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

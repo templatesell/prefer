@@ -106,6 +106,8 @@ if (!function_exists('prefer_post_thumbnail')) :
                 $image_size = 'full';
             }if($image_location == 'left-image'){
                 $image_size = 'full';
+            }if($image_location == 'right-image'){
+                $image_size = 'full';
             }
                 ?>
                 <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
