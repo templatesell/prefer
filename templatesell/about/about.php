@@ -7,7 +7,7 @@
  * Add a new page under Appearance
  */
 function prefer_menu() {
-	add_theme_page( __( 'Prefer Options', 'prefer' ), __( 'Prefer Options', 'prefer' ), 'edit_theme_options', 'prefer-theme', 'prefer_page' );
+	add_menu_page( __( 'Prefer Options', 'prefer' ), __( 'Prefer Options', 'prefer' ), 'edit_theme_options', 'prefer-theme', 'prefer_page' );
 }
 add_action( 'admin_menu', 'prefer_menu' );
 
