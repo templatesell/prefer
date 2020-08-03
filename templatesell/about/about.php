@@ -14,12 +14,11 @@ add_action( 'admin_menu', 'prefer_menu' );
 /**
  * Enqueue styles for the help page.
  */
-function prefer_admin_scripts( $hook ) {
-	if ( 'appearance_page_prefer-theme' !== $hook ) {
-		return;
-	}
-	wp_enqueue_style( 'prefer-admin-style', get_template_directory_uri() . '/templatesell/about/about.css', array(), '' );
-}
+function prefer_admin_scripts() {
+	if(is_admin()){
+		wp_enqueue_style( 'prefer-admin-style', get_template_directory_uri() . '/templatesell/about/about.css', array(), '' );
+ }
+} 
 add_action( 'admin_enqueue_scripts', 'prefer_admin_scripts' );
 
 /**
