@@ -37,7 +37,7 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    border:2px solid;
+    border:1px solid;
 }
 
 .btn-primary {
@@ -46,9 +46,9 @@
     border-color: transparent;
 }
 .btn-secondary {
-    background: #fff;
+    background: #f3f5f6;
     color: #333;
-    border-color: #dedede;
+    border-color: #619ebb;
 }
 .btn-primary:focus, 
 .btn-primary:hover {
@@ -61,8 +61,7 @@
 }
 .btn-secondary:focus, 
 .btn-secondary:hover {
-    background: #fff;
-    color: #d42929;
+    color: #619ebb;
 }
 .btn-success:focus, 
 .btn-success:hover {
