@@ -60,6 +60,7 @@ Prefer is distributed under the terms of the GNU GPL v2 or later.
 * Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.6.3 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
 * imagesLoaded MIT License https://imagesloaded.desandro.com/#mit-license
 * Canvi The MIT License (MIT) https://github.com/thepinecode/canvi/blob/master/LICENSE.txt
+* Pro notice - Theme Grill Demo Importer Plugin - GPL License
 
 == Screenshot Images [CCO License] ==
 Image for theme screenshot, Copyright Bruce Mars
