@@ -72,15 +72,10 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 				<div class="col-sm-2 col-md-12">
 					<div class="copyright">
 						<?php echo $copyright; ?>
-						<a href="<?php echo esc_url('https://www.templatesell.com/'); ?>">
-							<?php esc_html_e('Prefer', 'prefer' );?> 
-						</a>
-						<a href="<?php echo esc_url( 'https://wordpress.org/'); ?>" target="_blank">
-							<?php
-							/* translators: %s: CMS name, i.e. WordPress. */
-							printf( esc_html__( 'Powered By : %s', 'prefer' ), 'WordPress' );
-							?>
-						</a>
+						<?php
+							/* translators: 1: Theme name, 2: Theme author. */
+							printf( esc_html__( 'Theme: %1$s by %2$s.', 'prefer' ), 'Prefer', '<a href="http://www.templatesell.com/">Template Sell</a>' );
+						?>
 					</div>
 				</div>
 			</div>

@@ -23,12 +23,12 @@ if (!function_exists('prefer_social_sharing')) :
         ?>
         <div class="meta_bottom">
             <div class="post-share">
-                <a data-tooltip="Like it" class="tooltip"  target="_blank" href="<?php echo $prefer_facebook_sharing_url; ?>"><i class="fa fa-facebook"></i>Facebook</a>
-                <a data-tooltip="Tweet it" class="tooltip"  target="_blank" href="<?php echo $prefer_twitter_sharing_url; ?>"><i
-                            class="fa fa-twitter"></i> Twitter</a>
-                <a data-tooltip="Pin it" class="tooltip"  target="_blank" href="<?php echo $prefer_pinterest_sharing_url; ?>"><i
-                            class="fa fa-pinterest"></i>Pinterest</a>
-                <a data-tooltip="Share Now" class="tooltip"  target="_blank" href="<?php echo $prefer_linkedin_sharing_url; ?>"><i class="fa fa-linkedin"></i>Linkedin</a>
+                <a data-tooltip="<?php esc_attr_e('Share it','prefer'); ?>" class="tooltip"  target="_blank" href="<?php echo $prefer_facebook_sharing_url; ?>"><i class="fa fa-facebook"></i><?php esc_html_e('Facebook','prefer'); ?></a>
+                <a data-tooltip="<?php esc_attr_e('Tweet it','prefer'); ?>" class="tooltip"  target="_blank" href="<?php echo $prefer_twitter_sharing_url; ?>"><i
+                            class="fa fa-twitter"></i> <?php esc_html_e('Twitter','prefer'); ?></a>
+                <a data-tooltip="<?php esc_attr_e('Pin it','prefer'); ?>" class="tooltip"  target="_blank" href="<?php echo $prefer_pinterest_sharing_url; ?>"><i
+                            class="fa fa-pinterest"></i><?php esc_html_e('Pinterest','prefer'); ?></a>
+                <a data-tooltip="<?php esc_attr_e('Share Now','prefer'); ?>" class="tooltip"  target="_blank" href="<?php echo $prefer_linkedin_sharing_url; ?>"><i class="fa fa-linkedin"></i><?php esc_html_e('Linkedin','prefer'); ?></a>
             </div>
         </div>
         <?php

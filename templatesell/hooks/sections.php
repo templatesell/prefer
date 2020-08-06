@@ -72,10 +72,10 @@ if( !function_exists( 'prefer_blog_sidebar_position_array' ) ) :
     function prefer_blog_sidebar_position_array() {
 
         $sidebar_positions = array(
-            'right-sidebar'  => get_template_directory_uri() . '/assets/images/right-sidebar.png',
-            'left-sidebar' => get_template_directory_uri() . '/assets/images/left-sidebar.png',
-            'no-sidebar'  => get_template_directory_uri() . '/assets/images/no-sidebar.png',
-            'middle-column'  => get_template_directory_uri() . '/assets/images/middle-content.png',
+            'right-sidebar'  => esc_url(get_template_directory_uri() . '/assets/images/right-sidebar.png'),
+            'left-sidebar' => esc_url(get_template_directory_uri() . '/assets/images/left-sidebar.png'),
+            'no-sidebar'  => esc_url(get_template_directory_uri() . '/assets/images/no-sidebar.png'),
+            'middle-column'  => esc_url(get_template_directory_uri() . '/assets/images/middle-content.png'),
         );
         
         return $sidebar_positions;
@@ -92,10 +92,10 @@ if( !function_exists( 'prefer_sidebar_position_array' ) ) :
     function prefer_sidebar_position_array() {
 
         $sidebar_positions = array(
-            'single-right-sidebar'  => get_template_directory_uri() . '/assets/images/right-sidebar.png',
-            'single-left-sidebar' => get_template_directory_uri() . '/assets/images/left-sidebar.png',
-            'single-no-sidebar'  => get_template_directory_uri() . '/assets/images/no-sidebar.png',
-            'single-middle-column'  => get_template_directory_uri() . '/assets/images/middle-content.png',
+            'single-right-sidebar'  => esc_url(get_template_directory_uri() . '/assets/images/right-sidebar.png'),
+            'single-left-sidebar' => esc_url(get_template_directory_uri() . '/assets/images/left-sidebar.png'),
+            'single-no-sidebar'  => esc_url(get_template_directory_uri() . '/assets/images/no-sidebar.png'),
+            'single-middle-column'  => esc_url(get_template_directory_uri() . '/assets/images/middle-content.png'),
         );
         
         return $sidebar_positions;

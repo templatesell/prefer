@@ -30,6 +30,9 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.3 - August 10 2020 =
+* Fixed Reviewer Issues
+
 = 1.0.2 - August 03 2020 =
 * Changed `add_theme_page` to `add_menu_page`
 * Screenshot Changed
