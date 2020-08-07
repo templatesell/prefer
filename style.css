@@ -51,7 +51,7 @@ a {
 }
 a:focus {
     color: #4c4f53;
-    outline: 1px dotted #ccc!important;
+    outline: 2px solid #1e73be !important;
 
 }
 a:hover {
