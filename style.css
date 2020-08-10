@@ -2977,13 +2977,13 @@ a.link-format:hover {
     font-style: normal;
     font-weight: 600;
     color: #4c4f53;
-    width: 50px;
-    height: 50px;
+    min-width: 50px;
     line-height: 50px;
     text-align: center;
     background: #ddd;
     margin: 0 4px;
     display: inline-block;
+    padding: 0 15px;
 }
 
 .pagination a.page-numbers:focus {
@@ -2997,7 +2997,10 @@ a.link-format:hover {
     color: #EF9D87;
     text-decoration: underline !important;
 }
-
+.pagination .prev,
+.pagination .next{
+    padding: 0 25px;
+}
 .posts-navigation {
     margin: 5px 0 0;
     padding: 15px 0 0;
