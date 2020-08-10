@@ -2985,9 +2985,6 @@ a.link-format:hover {
     margin: 0 4px;
     display: inline-block;
 }
-.pagination .page-numbers.dots {
-    padding: 10px 5px;
-}
 
 .pagination a.page-numbers:focus {
     color: #4c4f53;
