@@ -8,13 +8,13 @@ $wp_customize->add_setting( 'prefer_options[prefer_logo_width_option]', array(
 ) );
 $wp_customize->add_control( 'prefer_options[prefer_logo_width_option]', array(
    'label'     => __( 'Logo Width', 'prefer' ),
-   'description' => __('Adjust the logo width. Minimum is 100px and maximum is 600px.', 'prefer'),
+   'description' => __('Adjust the logo width. Minimum is 100px and maximum is 700px.', 'prefer'),
    'section'   => 'title_tagline',
    'settings'  => 'prefer_options[prefer_logo_width_option]',
    'type'      => 'range',
    'priority'  => 15,
    'input_attrs' => array(
           'min' => 100,
-          'max' => 600,
+          'max' => 700,
         ),
 ) );

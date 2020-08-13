@@ -12,7 +12,7 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
         $default_theme_options = array(
 
             /*Logo Options*/
-            'prefer_logo_width_option' => '600',
+            'prefer_logo_width_option' => '700',
 
             /*Top Header*/
             'prefer_enable_top_header'=> 0, 
