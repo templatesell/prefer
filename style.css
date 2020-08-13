@@ -1656,7 +1656,7 @@ div#MobileMenu {
 }
 @media (min-width: 992px) {
     .main-menu ul li.dropdown_menu > a > span:before{
-        border-color: #fff;
+        border-color: #848484;
     }
 }
 @media (max-width: 991px) {
