@@ -32,6 +32,8 @@ Prefer includes support for Infinite Scroll in Jetpack.
 == Changelog ==
 = 1.0.4 - August 13 2020 =
 * Default value of customizer changed
+* Fixed some minor css
+* Changed logo width default value
 
 = 1.0.3 - August 10 2020 =
 * Fixed Reviewer Issues
