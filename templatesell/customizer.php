@@ -12,7 +12,7 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
         $default_theme_options = array(
 
             /*Logo Options*/
-            'prefer_logo_width_option' => '300',
+            'prefer_logo_width_option' => '600',
 
             /*Top Header*/
             'prefer_enable_top_header'=> 0, 
@@ -20,8 +20,8 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
             'prefer_enable_top_header_menu'=> 0,
 
            /*Header Options*/
-            'prefer_enable_offcanvas'  => 0,
-            'prefer_enable_search'  => 0,
+            'prefer_enable_offcanvas'  => 1,
+            'prefer_enable_search'  => 1,
 
             /*Colors Options*/
             'prefer_primary_color'  => '#EF9D87',
@@ -57,7 +57,7 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
 
 
             /*Sticky Sidebar*/
-            'prefer-enable-sticky-sidebar' => 1,
+            'prefer-enable-sticky-sidebar' => 0,
 
             /*Footer Section*/
             'prefer-footer-copyright'  => esc_html__('&#169; All Rights Reserved 2020','prefer'),
