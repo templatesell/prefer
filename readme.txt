@@ -3,8 +3,8 @@
 Contributors: templatesell
 Tags: grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets, custom-colors, custom-header, editor-style, rtl-language-support, theme-options, threaded-comments, blog, news
 Requires at least: 4.5
-Requires PHP: 4.7
-Tested up to: 5.4
+Requires PHP: 5.2
+Tested up to: 5.5
 Stable tag: 1.0.0
 License: GNU General Prefer License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,11 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.5 - August 24 2020 =
+* Fixed Masonry Issue
+* Fixed Keyboard Navigation
+* Fixed some minor css issues
+
 = 1.0.4 - August 13 2020 =
 * Default value of customizer changed
 * Fixed some minor css

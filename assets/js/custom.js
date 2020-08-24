@@ -15,24 +15,6 @@
             arrows: true,
             dots: false,
             fade: true,
-			// '<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
-			// nextArrow:
-			// '<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
-			// arrows: true,
-	  //     	responsive: [
-			// 	{
-			// 	  breakpoint: 767,
-			// 	  settings: {
-			// 	    arrows: true,
-			// 	  }
-			// 	},
-			// 	{
-			// 	  breakpoint: 992,
-			// 	  settings: {
-			// 	    arrows: true,
-			// 	  }
-			// 	}
-			// ]
     	});
 
         // Boxes Section
