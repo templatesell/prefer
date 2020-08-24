@@ -35,7 +35,7 @@
             $('#free-temp-post').html('');
 
             // Make jQuery object from HTML string
-            var $moreBlocks = $( html ).filter('article.masonry-post, article.one-column, article.two-column  ');
+            var $moreBlocks = $( html ).filter('.masonry-post, .one-column, .two-column  ');
             // Append new blocks to container
             $('#masonry-loop').append( $moreBlocks ).imagesLoaded(function(){
                 // Have Masonry position new blocks
