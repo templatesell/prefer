@@ -2083,6 +2083,13 @@ section.slider-wrapper {
         top: auto;
         bottom: 7px;
     }
+    .modern-slider .slide-wrap .entry-meta ul li{
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    .modern-slider .slide-wrap .more-btn{
+        font-size: 13px;
+    }
 }
 /**
 ================================================
@@ -6379,7 +6386,7 @@ background: #fff;
     line-height: 0;
 }
 .promo-section .slick-dots li.slick-active button{
-    background: #fff;
+    background: #000;
 }
 .promo-section .slick-dots li button {
     text-indent: -99999px;
