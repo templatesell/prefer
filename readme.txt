@@ -30,6 +30,11 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.6 - September 06 2020 =
+* Fixed Masonry Issue
+* Tested with latest WP version. 
+* Fixed some minor CSS issues
+
 = 1.0.5 - August 24 2020 =
 * Fixed Masonry Issue
 * Fixed Keyboard Navigation
