@@ -2410,33 +2410,7 @@ article.format-status .post-content .post-format::after{
     position: relative;
 }
 
-/* img */
-.post-media img {
-    display: block;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-}
 
-/* img overlay */
-.post-bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    width: 100%;
-    height: 100%;
-    background-color: #1f2123;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease;
-    -moz-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
-}
-.post-wrap:hover .post-bg-overlay {
-    opacity: 0.2;
-}
 /***
 ====================================================================
 ## Post media: slider (gallery)
