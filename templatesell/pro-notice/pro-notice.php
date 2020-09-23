@@ -97,7 +97,7 @@ class Prefer_Theme_Notice {
 		$theme_lists             = self::get_theme_lists();
 		$current_theme           = strtolower( $this->active_theme );
 		$theme_notice_start_time = get_option( 'prefer_theme_notice_start_time' );
-		$pre_sales_query_link    = ( 'prefer' !== $current_theme ) ? "https://www.templatesell.com/contact-us" : "https://www.templatesell.com/contact-us";
+		$pre_sales_query_link    = ( 'prefer' !== $current_theme ) ? "https://www.templatesell.com/support" : "https://www.templatesell.com/support";
 		$ignore_notice_permanent = get_user_meta( $this->current_user_data->ID, 'prefer_nag_pro_theme_notice_ignore', true );
 		$ignore_notice_partially = get_user_meta( $this->current_user_data->ID, 'prefer_nag_pro_theme_notice_partial_ignore', true );
 
@@ -125,12 +125,12 @@ class Prefer_Theme_Notice {
 				printf(
 					esc_html__(
 						/* Translators: %1$s current user display name., %2$s Currently activated theme., %3$s Pro theme link., %4$s Coupon code. */
-						'Howdy, %1$s! You\'ve been using %2$s theme for a while now, and we hope you\'re happy with it. If you need more options and access to the premium features, you can %3$s. Also, you can use the coupon code %4$s to get 30 percent discount while making the purchase. Enjoy!', 'prefer'
+						'Howdy, %1$s! You\'ve been using %2$s theme for a while now, and we hope you\'re happy with it. If you need more options and access to the premium features, you can %3$s. Also, you can use the coupon code %4$s to get 20 percent discount while making the purchase. Enjoy!', 'prefer'
 					),
 					'<strong>' . esc_html( $this->current_user_data->display_name ) . '</strong>',
 					$this->active_theme,
 					$pro_link,
-					'<code>tsb30</code>'
+					'<code>TScare20</code>'
 				);
 				?>
 			</p>
