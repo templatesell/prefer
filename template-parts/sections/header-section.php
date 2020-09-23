@@ -21,7 +21,6 @@ $search_header = absint($prefer_theme_options['prefer_enable_search']);
 	<div class="canvi-user-info">
 	    <div class="canvi-user-info__data">
 	        <span class="canvi-user-info__title"><?php bloginfo( 'name' ); ?></span>
-	        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="canvi-user-info__meta"><?php esc_html_e('View site', 'prefer'); ?></a>
 	        <div class="canvi-user-info__close closebtn"></div>
 	    </div>
 	</div>

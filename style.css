@@ -4568,8 +4568,8 @@ article.masonry-post {
 .widget_categories ul li {
     color: #989ea6;
     margin-bottom: 10px;
-    display: table;
-    text-align: right;
+    display: block;
+    text-align: left;
     width: 100%;
 }
 .widget_categories ul li:last-child {
@@ -4577,7 +4577,7 @@ article.masonry-post {
 }
 .widget_categories ul li a {
     margin-right: 4px;
-    display: table-cell;
+    display: inline-block;
     text-align: left;
 }
 .widget_categories ul ul {
