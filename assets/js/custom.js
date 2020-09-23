@@ -66,17 +66,17 @@
 			});
 	  	}
 
-	  	$( "a[href*='#']" ).click(function( event ) {
-		  event.preventDefault();
-		});
+	 //  	$( "a[href*='#']" ).click(function( event ) {
+		//   event.preventDefault();
+		// });
 
 	  	// Tab Navigate
-	  	$( '#primary-menu li.menu-item-has-children' ).focusin( function() {
-        $( this ).addClass( 'locked' );
-        }).add( this ).focusout( function() {
-            if ( !$( this ).is( ':focus' ) ) {
-                $( this ).removeClass( 'locked' );
-            }
-        });        
+	  	// $( '#primary-menu li.menu-item-has-children' ).focusin( function() {
+    //     $( this ).addClass( 'locked' );
+    //     }).add( this ).focusout( function() {
+    //         if ( !$( this ).is( ':focus' ) ) {
+    //             $( this ).removeClass( 'locked' );
+    //         }
+    //     });        
  	}); 	
 })(jQuery);
