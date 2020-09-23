@@ -30,6 +30,7 @@ if (!function_exists('prefer_dynamic_css')) :
             a.link-format,
             .comment-form #submit:hover, 
             .comment-form #submit:focus,
+            .meta_bottom .post-share a:hover,
             .tabs-nav li:before,
             .footer-wrap .widget-title:after,
             .post-slider-section .s-cat,
@@ -74,6 +75,10 @@ if (!function_exists('prefer_dynamic_css')) :
         //Primary Color
         if (!empty($prefer_primary_color)) {
             $custom_css .= "
+            .comment-form .logged-in-as a:last-child:hover, 
+            .comment-form .logged-in-as a:last-child:focus,
+            .post-cats > span a:hover, 
+            .post-cats > span a:focus,
             .main-header a:hover, 
             .main-header a:focus, 
             .main-header a:active,

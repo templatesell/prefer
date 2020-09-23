@@ -2535,6 +2535,9 @@ object {
 .post-content {
     padding-bottom: 0;
 }
+.single .post-content{
+    padding: 20px 0;
+}
 
 
 
