@@ -66,10 +66,10 @@ $wp_customize->add_control('prefer_options[prefer-single-page-related-posts]', a
 
 /*callback functions related posts*/
 if (!function_exists('prefer_related_post_callback')) :
-    function prefer_related_post_callback()
+        function prefer_related_post_callback()
     {
         global $prefer_theme_options;
-        $related_posts = absint($prefer_theme_options['prefer-single-page-related-posts']);
+        $related_posts = isset($prefer_theme_options['prefer-single-page-related-posts'])? absint($prefer_theme_options['prefer-single-page-related-posts']):0;
         if (1 == $related_posts) {
             return true;
         } else {

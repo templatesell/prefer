@@ -9,19 +9,6 @@ $wp_customize->add_section( 'prefer_slider_section', array(
    'panel' 		 => 'prefer_panel',
 ) );
 
-/*callback functions slider*/
-if ( !function_exists('prefer_slider_active_callback') ) :
-  function prefer_slider_active_callback(){
-      global $prefer_theme_options;
-      $enable_slider = absint($prefer_theme_options['prefer_enable_slider']);
-      if( 1 == $enable_slider ){
-          return true;
-      }
-      else{
-          return false;
-      }
-  }
-endif;
 
 /*Slider Enable Option*/
 $wp_customize->add_setting( 'prefer_options[prefer_enable_slider]', array(
@@ -41,7 +28,21 @@ $wp_customize->add_control(
         'type'      => 'checkbox',
        'priority'  => 15,
    )
- );        
+ );    
+
+ /*callback functions slider*/
+if ( !function_exists('prefer_slider_active_callback') ) :
+  function prefer_slider_active_callback(){
+      global $prefer_theme_options;
+      $enable_slider =  isset($prefer_theme_options['prefer_enable_slider'])? absint($prefer_theme_options['prefer_enable_slider']):0;     
+      if( 1 == $enable_slider ){
+          return true;
+      }
+      else{
+          return false;
+      }
+  }
+endif;    
 
 /*Slider Category Selection*/
 $wp_customize->add_setting( 'prefer_options[prefer-select-category]', array(
@@ -63,6 +64,7 @@ $wp_customize->add_control(
             'settings'  => 'prefer_options[prefer-select-category]',
             'type'      => 'category_dropdown',
             'priority'  => 15,
+            'active_callback'=> 'prefer_slider_active_callback',
         )
     )
 

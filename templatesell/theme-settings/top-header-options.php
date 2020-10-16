@@ -10,10 +10,10 @@ $wp_customize->add_section( 'prefer_top_header_section', array(
 
 /*callback functions header section*/
 if ( !function_exists('prefer_header_active_callback') ) :
-  function prefer_header_active_callback(){
+    function prefer_header_active_callback(){
       global $prefer_theme_options;
-      $enable_header = absint($prefer_theme_options['prefer_enable_top_header']);
-      if( 1 == $enable_header ){
+      $enable_header = isset($prefer_theme_options['prefer_enable_top_header'])? absint($prefer_theme_options['prefer_enable_top_header']):0;
+      if( 1 == $enable_header){
           return true;
       }
       else{

@@ -9,11 +9,11 @@ $wp_customize->add_section( 'prefer_promo_section', array(
     'panel'          => 'prefer_panel',
 ) );
 
-/*callback functions slider*/
+/*callback functions boxes*/
 if ( !function_exists('prefer_promo_active_callback') ) :
-    function prefer_promo_active_callback(){
+        function prefer_promo_active_callback(){
         global $prefer_theme_options;
-        $enable_promo = absint($prefer_theme_options['prefer_enable_promo']);
+        $enable_promo = isset($prefer_theme_options['prefer_enable_promo'])? absint($prefer_theme_options['prefer_enable_promo']):0;
         if( 1 == $enable_promo ){
             return true;
         }

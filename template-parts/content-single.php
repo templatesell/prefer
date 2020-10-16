@@ -7,12 +7,15 @@
  */
 global $prefer_theme_options;
 $social_share = absint($prefer_theme_options['prefer-single-social-share']);
+$featured_image = absint($prefer_theme_options['prefer-single-page-featured-image']);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-wrap">
+        <?php if($featured_image == 1){ ?>
         <div class="post-media">
             <?php prefer_post_thumbnail(); ?>
         </div>
+        <?php } ?>
         <div class="post-content">
             <div class="post-cats">
                 <?php prefer_entry_meta(); ?>

@@ -47,7 +47,6 @@ if ( ! function_exists( 'prefer_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'prefer' ),
 			'top' => esc_html__( 'Top Menu', 'prefer' ),
-			'footer' => esc_html__( 'Footer Menu', 'prefer' ),
 			'social' => esc_html__( 'Social Icons', 'prefer' ),
 		) );
 
