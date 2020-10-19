@@ -30,6 +30,9 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.9 - October 19 2020 =
+* Added link on blog page featured image
+
 = 1.0.8 - October 18 2020 =
 * Fixed Featured Image Option 
 * Fixed customizer call back issues
