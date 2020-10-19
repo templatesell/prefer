@@ -32,6 +32,7 @@ $author = absint($prefer_theme_options['prefer-show-hide-author']);
                             prefer_post_thumbnail('full');
                         }
                      ?>
+                     <a class="img-link" href="<?php the_permalink(); ?>"></a>
                 </div>
 
                 <?php 
