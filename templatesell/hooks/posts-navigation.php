@@ -16,7 +16,7 @@ if (!function_exists('prefer_posts_navigation')) :
         if ('numeric' == $prefer_pagination_option) {
             echo "<div class='pagination'>";
                 the_posts_pagination();
-            echo "<div>";
+            echo "</div>";
         } elseif ('ajax' == $prefer_pagination_option) {
             $page_number = get_query_var('paged');
             if ($page_number == 0) {
