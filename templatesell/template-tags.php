@@ -61,15 +61,24 @@ if ( ! function_exists( 'prefer_entry_meta' ) ) :
 		if ( $categories_list ) {
 			echo '<span class="cat-links">' . $categories_list . '</span>';
 		}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'prefer' ) );
-		if ( $tags_list && is_singular() ) {
-			printf( '<span class="tags-links">' . '<i class="fa fa-tag"></i>' . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
       	
 	}
 	}
+endif;
+
+
+if (!function_exists('prefer_meta_tags')) :
+    /**
+     * Prints HTML with meta information for the tags.
+     */
+    function prefer_meta_tags(){
+        /* translators: used between list items, there is a space after the comma */
+        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'prefer' ) );
+        if ( $tags_list ) {
+            /* translators: 1: list of tags. */
+            printf( '<div class="entry-meta entry-meta-footer"> <span class="tags-links"><i class="fa fa-folder-open"></i> ' . esc_html( '%1$s', 'prefer' ) . '</span></div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
+    }
 endif;
 
 /**

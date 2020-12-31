@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['prefer_theme_options'] = prefer_get_options_value();
+
 /*Promo Section Options*/
 
 $wp_customize->add_section( 'prefer_promo_section', array(
@@ -13,7 +15,7 @@ $wp_customize->add_section( 'prefer_promo_section', array(
 if ( !function_exists('prefer_promo_active_callback') ) :
         function prefer_promo_active_callback(){
         global $prefer_theme_options;
-        $enable_promo = isset($prefer_theme_options['prefer_enable_promo'])? absint($prefer_theme_options['prefer_enable_promo']):0;
+        $enable_promo = absint($prefer_theme_options['prefer_enable_promo']);
         if( 1 == $enable_promo ){
             return true;
         }

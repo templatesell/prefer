@@ -15,6 +15,8 @@ $enable_menu   = absint($prefer_theme_options['prefer_enable_top_header_menu']);
 $enable_social = absint($prefer_theme_options['prefer_enable_top_header_social']);
 $offcanvas = absint($prefer_theme_options['prefer_enable_offcanvas']);
 $search_header = absint($prefer_theme_options['prefer_enable_search']);
+$menu_text_mobile = esc_html($prefer_theme_options['prefer_mobile_menu_text']);
+$mobile_menu_type = esc_attr($prefer_theme_options['prefer_mobile_menu_option']);
 ?>
 <?php if( 1 == $offcanvas ){ ?>
 <div class="myCanvasNav canvi-navbar">
@@ -128,13 +130,14 @@ $search_header = absint($prefer_theme_options['prefer_enable_search']);
 						</div>				
 					</div>
 				<?php } ?>
-
 				<button class="bar-menu">
-					<div class="line-menu line-half first-line"></div>
-					<div class="line-menu"></div>
-					<div class="line-menu line-half last-line"></div>
-					<a><?php _e('Menu', 'prefer'); ?></a>
+					<?php if($mobile_menu_type == 'menu-icon'){ ?>
+						<span class="berger"><span></span></span>
+						<?php }else{ ?>
+						<span><?php echo $menu_text_mobile; ?></span>
+					<?php } ?>
 				</button>
+
 				<div class="main-menu menu-caret">
 					<?php
 					wp_nav_menu( array(

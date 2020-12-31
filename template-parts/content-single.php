@@ -8,6 +8,7 @@
 global $prefer_theme_options;
 $social_share = absint($prefer_theme_options['prefer-single-social-share']);
 $featured_image = absint($prefer_theme_options['prefer-single-page-featured-image']);
+$post_tags = absint($prefer_theme_options['prefer-single-page-tags-option']);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-wrap">
@@ -66,6 +67,11 @@ $featured_image = absint($prefer_theme_options['prefer-single-page-featured-imag
                 <?php 
                 if( 1 == $social_share ){
                     do_action( 'prefer_social_sharing' ,get_the_ID() );
+                }
+                ?>
+                <?php 
+                if($post_tags == 1 ){
+                    prefer_meta_tags(); 
                 }
                 ?>
             </footer><!-- .entry-footer -->

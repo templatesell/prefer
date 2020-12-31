@@ -19,9 +19,13 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
             'prefer_enable_top_header_social'=> 0,
             'prefer_enable_top_header_menu'=> 0,
 
-           /*Header Options*/
+            /*Header Options*/
             'prefer_enable_offcanvas'  => 1,
             'prefer_enable_search'  => 1,
+
+            /*Menu Options*/
+            'prefer_mobile_menu_text'  => esc_html__('Menu','prefer'),
+            'prefer_mobile_menu_option'=> 'menu-text',
 
             /*Colors Options*/
             'prefer_primary_color'  => '#EF9D87',
@@ -54,7 +58,7 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
             'prefer-single-page-related-posts-title' => esc_html__('You may like','prefer'),
             'prefer-sidebar-single-page'=> 'single-right-sidebar',
             'prefer-single-social-share' => 1,
-
+            'prefer-single-page-tags-option'=>0,
 
             /*Sticky Sidebar*/
             'prefer-enable-sticky-sidebar' => 0,

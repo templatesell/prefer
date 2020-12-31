@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['prefer_theme_options'] = prefer_get_options_value();
+
 /*Top Header Options*/
 $wp_customize->add_section( 'prefer_top_header_section', array(
    'priority'       => 20,
@@ -12,7 +14,7 @@ $wp_customize->add_section( 'prefer_top_header_section', array(
 if ( !function_exists('prefer_header_active_callback') ) :
     function prefer_header_active_callback(){
       global $prefer_theme_options;
-      $enable_header = isset($prefer_theme_options['prefer_enable_top_header'])? absint($prefer_theme_options['prefer_enable_top_header']):0;
+      $enable_header = absint($prefer_theme_options['prefer_enable_top_header']);
       if( 1 == $enable_header){
           return true;
       }

@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['prefer_theme_options'] = prefer_get_options_value();
+
 /*Single Page Options*/
 $wp_customize->add_section('prefer_single_page_section', array(
     'priority' => 20,
@@ -69,7 +71,7 @@ if (!function_exists('prefer_related_post_callback')) :
         function prefer_related_post_callback()
     {
         global $prefer_theme_options;
-        $related_posts = isset($prefer_theme_options['prefer-single-page-related-posts'])? absint($prefer_theme_options['prefer-single-page-related-posts']):0;
+        $related_posts = absint($prefer_theme_options['prefer-single-page-related-posts']);
         if (1 == $related_posts) {
             return true;
         } else {
@@ -109,6 +111,23 @@ $wp_customize->add_control('prefer_options[prefer-single-social-share]', array(
     'description' => __('Enable Social Sharing on Single Posts.', 'prefer'),
     'section' => 'prefer_single_page_section',
     'settings' => 'prefer_options[prefer-single-social-share]',
+    'type' => 'checkbox',
+    'priority' => 15,
+));
+
+/*Tag Option*/
+$wp_customize->add_setting('prefer_options[prefer-single-page-tags-option]', array(
+    'capability' => 'edit_theme_options',
+    'transport' => 'refresh',
+    'default' => $default['prefer-single-page-tags-option'],
+    'sanitize_callback' => 'prefer_sanitize_checkbox'
+));
+
+$wp_customize->add_control('prefer_options[prefer-single-page-tags-option]', array(
+    'label' => __('Enable Tags on Single Posts', 'prefer'),
+    'description' => __('You can hide tags on single post from here.', 'prefer'),
+    'section' => 'prefer_single_page_section',
+    'settings' => 'prefer_options[prefer-single-page-tags-option]',
     'type' => 'checkbox',
     'priority' => 15,
 ));

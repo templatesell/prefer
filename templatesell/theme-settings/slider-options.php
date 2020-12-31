@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['prefer_theme_options'] = prefer_get_options_value();
+
 /*Slider Options*/
 
 $wp_customize->add_section( 'prefer_slider_section', array(
@@ -34,7 +36,7 @@ $wp_customize->add_control(
 if ( !function_exists('prefer_slider_active_callback') ) :
   function prefer_slider_active_callback(){
       global $prefer_theme_options;
-      $enable_slider =  isset($prefer_theme_options['prefer_enable_slider'])? absint($prefer_theme_options['prefer_enable_slider']):0;     
+      $enable_slider =  absint($prefer_theme_options['prefer_enable_slider']);     
       if( 1 == $enable_slider ){
           return true;
       }
