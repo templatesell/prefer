@@ -109,6 +109,8 @@ if (!function_exists('prefer_dynamic_css')) :
             .footer-social-links a:hover,
             .footer-social-links a:focus,
             .site-footer a:hover, 
+            .tags-links a,
+            .tags-links i,
             .post-cats > span i, 
             .post-cats > span a,
             .site-footer a,

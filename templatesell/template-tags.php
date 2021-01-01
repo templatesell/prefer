@@ -76,7 +76,7 @@ if (!function_exists('prefer_meta_tags')) :
         $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'prefer' ) );
         if ( $tags_list ) {
             /* translators: 1: list of tags. */
-            printf( '<div class="entry-meta entry-meta-footer"> <span class="tags-links"><i class="fa fa-folder-open"></i> ' . esc_html( '%1$s', 'prefer' ) . '</span></div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            printf( '<div class="entry-meta entry-meta-footer"> <span class="tags-links"><i class="fa fa-tag"></i> ' . esc_html( '%1$s', 'prefer' ) . '</span></div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         }
     }
 endif;

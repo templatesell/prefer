@@ -65,15 +65,16 @@ $post_tags = absint($prefer_theme_options['prefer-single-page-tags-option']);
             </div><!-- .entry-content -->
             <footer class="post-footer entry-footer">
                 <?php 
-                if( 1 == $social_share ){
-                    do_action( 'prefer_social_sharing' ,get_the_ID() );
-                }
-                ?>
-                <?php 
                 if($post_tags == 1 ){
                     prefer_meta_tags(); 
                 }
                 ?>
+                <?php 
+                if( 1 == $social_share ){
+                    do_action( 'prefer_social_sharing' ,get_the_ID() );
+                }
+                ?>
+                
             </footer><!-- .entry-footer -->
             <?php the_post_navigation(); ?>
         </div>
