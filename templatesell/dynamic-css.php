@@ -18,6 +18,11 @@ if (!function_exists('prefer_dynamic_css')) :
         $prefer_primary_color              = esc_attr($prefer_theme_options['prefer_primary_color']);
         $prefer_logo_width              = absint($prefer_theme_options['prefer_logo_width_option']);
 
+        $prefer_header_overlay  = esc_attr($prefer_theme_options['prefer_slider_overlay_color']);
+        $prefer_header_transparent  = esc_attr($prefer_theme_options['prefer_slider_overlay_transparent']);
+        $prefer_header_min_height              = absint($prefer_theme_options['prefer_header_image_height']);
+
+
         $custom_css = '';
 
         //Primary  Background 
