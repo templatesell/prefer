@@ -128,6 +128,30 @@ if (!function_exists('prefer_dynamic_css')) :
             }";
         }
 
+         //Header Overlay
+        if (!empty($prefer_header_overlay)) {
+            $custom_css .= "
+            .header-image:before { 
+                background-color : ". $prefer_header_overlay."; 
+            }";
+        }
+
+        //Header Tranparent
+        if (!empty($prefer_header_transparent)) {
+            $custom_css .= "
+            .header-image:before { 
+                opacity : ". $prefer_header_transparent."; 
+            }";
+        }
+
+        //Header Min Height
+        if (!empty($prefer_header_min_height)) {
+            $custom_css .= "
+            .header-1 .header-image .head_one { 
+                min-height : ". $prefer_header_min_height."px; 
+            }";
+        }
+
         wp_add_inline_style('prefer-style', $custom_css);
     }
 endif;

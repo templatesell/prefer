@@ -74,6 +74,18 @@ if ( ! function_exists( 'prefer_setup' ) ) :
 			'flex-height' => true,
 		) );
 
+		// Set up the WordPress core custom background feature.
+		add_theme_support(
+			'body',
+			apply_filters(
+				'prefer_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
+
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 

@@ -19,6 +19,12 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
             'prefer_enable_top_header_social'=> 0,
             'prefer_enable_top_header_menu'=> 0,
 
+            /*Header Image*/
+            'prefer_enable_header_image_overlay'=> 0,
+            'prefer_slider_overlay_color'=> '#000000',
+            'prefer_slider_overlay_transparent'=> '0.1',
+            'prefer_header_image_height'=> '100',
+
             /*Header Options*/
             'prefer_enable_offcanvas'  => 1,
             'prefer_enable_search'  => 1,
