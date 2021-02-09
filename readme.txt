@@ -30,7 +30,14 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
-= 1.1.0 - January 01 2020 =
+= 1.1.2 - February 09 2021 =
+* Added pagination in search page
+
+= 1.1.1 - January 30 2021 =
+* Added option for header overlay color
+* Added option to change the header image height
+
+= 1.1.0 - January 01 2021 =
 * Added option to show hide tags in single page
 * Added option to change Menu text in mobile
 * Added option to change the menu text to hamberger menu in mobile

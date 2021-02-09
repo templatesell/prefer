@@ -47,8 +47,16 @@ get_header();
 
 						/* Masonry end Section */
 						do_action('prefer_masonry_end_hook');
-						
-						else :
+
+						/**
+			             * prefer_action_navigation hook
+			             * @since Prefer 1.0.0
+			             *
+			             * @hooked prefer_action_navigation -  10
+			             */
+						do_action( 'prefer_action_navigation');
+							
+					else :
 
 						get_template_part( 'template-parts/content', 'none' );
 						endif;
