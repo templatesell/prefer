@@ -4,16 +4,18 @@ Contributors: templatesell
 Tags: grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets, custom-colors, custom-header, editor-style, rtl-language-support, theme-options, threaded-comments, blog, news
 Requires at least: 4.5
 Requires PHP: 5.2
-Tested up to: 5.6
+Tested up to: 5.7
 Stable tag: 1.0.0
 License: GNU General Prefer License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A perfect theme for blog and magazine site. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme. This theme has search option, off-canvas sidebar, multiple sidebar options, footer options, featured slider, promo boxed, footer widgets and many more. Besides that, this theme comes with added custom widgets for author information, featured posts, social icons, etc. It comes with primary color option to change the whole site color with a single click.
+Description: A perfect theme for blog and magazine site. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme. This theme has search option, off-canvas sidebar, multiple sidebar options, footer options, featured slider, promo boxed, footer widgets and many more. Besides that, this theme comes with added custom widgets for author information, featured posts, social icons, etc. It comes with primary color option to change the whole site color with a single click. If you are looking for best feminine and SEO ready theme then this will be the perfect choice for you. Demo: https://templatesell.net/demo/prefer/ 
+
 
 == Description ==
 
 A perfect theme for blog and magazine site. With masonry layout and multiple blog page layout, this theme is the awesome and minimal theme.
+
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
@@ -30,6 +32,9 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.1.3 - March 10 2021 =
+* Tested with WP 5.7
+
 = 1.1.2 - February 09 2021 =
 * Added pagination in search page
 
