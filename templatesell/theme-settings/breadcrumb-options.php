@@ -40,6 +40,7 @@ $wp_customize->add_control('prefer_options[prefer-breadcrumb-selection-option]',
     'choices' => array(
         'theme-breadcrumb' => __('Theme Breadcrumb', 'prefer'),
         'yoast-breadcrumb' => __('Yoast SEO Breadcrumb', 'prefer'),
+        'rankmath' => __('Rank Math Breadcrumb', 'prefer'),
         'navxt-breadcrumb' => __('NavXT Breadcrumb', 'prefer'),    
     ),
     'label' => __('Select the Breadcrumb', 'prefer'),
