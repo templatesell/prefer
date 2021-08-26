@@ -32,6 +32,9 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.1.6 - August 26 2021 =
+* Fixed upgrade to pro link
+
 = 1.1.5 - August 11 2021 =
 * Tested with WP 5.8
 * Disable new widget screen

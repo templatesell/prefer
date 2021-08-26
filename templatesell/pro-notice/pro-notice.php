@@ -48,7 +48,7 @@ class Prefer_Theme_Notice {
 	public static function get_theme_lists() {
 
 		$theme_lists = array(
-			'prefer'      => 'https://www.templatesell.com/item/prefer-plus-masonry-wordpress-theme/',
+			'prefer'      => 'https://www.templatesell.com/item/prefer-plus/',
 		);
 
 		return $theme_lists;
