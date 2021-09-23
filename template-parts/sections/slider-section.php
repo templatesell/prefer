@@ -24,7 +24,7 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
 		$slider_query = new WP_Query($args);
 		if ($slider_query->have_posts()): ?>
     <div class="container">
-    <div class="modern-slider" data-slick='<?php echo $slick_args_encoded; ?>'>
+      <div class="modern-slider" data-slick='<?php echo isset( $slick_args_encoded ) ? $slick_args_encoded : ''; ?>'>
 				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); 
           if(has_post_thumbnail()){
           $image_id = get_post_thumbnail_id();

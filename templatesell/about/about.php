@@ -43,7 +43,7 @@ function prefer_page() {
 				<div class="theme-title">
 					<h3><?php esc_html_e( 'Looking for theme Documentation?', 'prefer' ); ?></h3>
 				</div>
-				<a href="http://www.docs.templatesell.net/prefer" target="_blank" class="btn btn-secondary"><?php esc_html_e( 'Documentation - Click Here', 'prefer' ); ?></a>
+				<a href="http://docs.templatesell.net/prefer" target="_blank" class="btn btn-secondary"><?php esc_html_e( 'Documentation - Click Here', 'prefer' ); ?></a>
 			</div>
 		</div>
 		<div class="prefer-panel">
