@@ -8,7 +8,6 @@
  *
  * @package Prefer
  */
-$GLOBALS['prefer_theme_options'] = prefer_get_options_value();
 global $prefer_theme_options;
 $enable_slider = absint($prefer_theme_options['prefer_enable_slider']);
 $enable_box = $prefer_theme_options['prefer_enable_promo'];
@@ -27,8 +26,8 @@ $enable_box = $prefer_theme_options['prefer_enable_promo'];
 //wp_body_open hook from WordPress 5.2
 if ( function_exists( 'wp_body_open' ) ) {
     wp_body_open();
-}else { 
-    do_action( 'wp_body_open' ); 
+}else {
+    do_action( 'wp_body_open' );
 }
 ?>
 <div id="page" class="site ">
@@ -57,7 +56,7 @@ if ( function_exists( 'wp_body_open' ) ) {
     <?php if ($enable_box == 1 && (is_home() || is_front_page() ) )  { ?>
         <section class="promo-slider-wrapper">
             <?php
-            
+
             /*
             * Boxes Section Hook
             */
@@ -65,11 +64,11 @@ if ( function_exists( 'wp_body_open' ) ) {
             ?>
         </section>
     <?php } ?>
-    
+
     <?php if (is_active_sidebar('below-slider-area') && (is_home() || is_front_page())) { ?>
         <section class="post-area slider-below-widget-wrapper">
             <div class="container">
-                <?php 
+                <?php
                 /*
                 * Widget area below slider
                 */

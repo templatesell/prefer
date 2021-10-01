@@ -15,66 +15,66 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
             'prefer_logo_width_option' => '700',
 
             /*Top Header*/
-            'prefer_enable_top_header'=> 0, 
-            'prefer_enable_top_header_social'=> 0,
-            'prefer_enable_top_header_menu'=> 0,
+            'prefer_enable_top_header'        => 0,
+            'prefer_enable_top_header_social' => 0,
+            'prefer_enable_top_header_menu'   => 0,
 
             /*Header Image*/
-            'prefer_enable_header_image_overlay'=> 0,
-            'prefer_slider_overlay_color'=> '#000000',
-            'prefer_slider_overlay_transparent'=> '0.1',
-            'prefer_header_image_height'=> '100',
+            'prefer_enable_header_image_overlay' => 0,
+            'prefer_slider_overlay_color'        => '#000000',
+            'prefer_slider_overlay_transparent'  => '0.1',
+            'prefer_header_image_height'         => '100',
 
             /*Header Options*/
-            'prefer_enable_offcanvas'  => 1,
-            'prefer_enable_search'  => 1,
+            'prefer_enable_offcanvas' => 1,
+            'prefer_enable_search'    => 1,
 
             /*Menu Options*/
-            'prefer_mobile_menu_text'  => esc_html__('Menu','prefer'),
-            'prefer_mobile_menu_option'=> 'menu-text',
+            'prefer_mobile_menu_text'   => esc_html__('Menu','prefer'),
+            'prefer_mobile_menu_option' => 'menu-text',
 
             /*Colors Options*/
-            'prefer_primary_color'  => '#EF9D87',
+            'prefer_primary_color' => '#EF9D87',
 
             /*Slider Options*/
-            'prefer_enable_slider'      => 0,
-            'prefer-select-category'    => 0,
-    
+            'prefer_enable_slider'   => 0,
+            'prefer-select-category' => 0,
+
             /*Boxes Section */
-            'prefer_enable_promo'       => 0,
-            'prefer-promo-select-category'=> 0,
-            
+            'prefer_enable_promo'          => 0,
+            'prefer-promo-select-category' => 0,
+
             /*Blog Page*/
-            'prefer-sidebar-blog-page' => 'right-sidebar',
-            'prefer-column-blog-page'  => 'one-column',
-            'prefer-blog-image-layout' => 'left-image',
-            'prefer-content-show-from' => 'excerpt',
-            'prefer-excerpt-length'    => 25,
-            'prefer-pagination-options'=> 'numeric',
-            'prefer-read-more-text'    => '',
-            'prefer-blog-exclude-category'=> '',
-            'prefer-show-hide-share'   => 1,
-            'prefer-show-hide-category'=> 1,
-            'prefer-show-hide-date'=> 1,
-            'prefer-show-hide-author'=> 1,
+            'prefer-sidebar-blog-page'     => 'right-sidebar',
+            'prefer-column-blog-page'      => 'one-column',
+            'prefer-blog-image-layout'     => 'left-image',
+            'prefer-content-show-from'     => 'excerpt',
+            'prefer-excerpt-length'        => 25,
+            'prefer-pagination-options'    => 'numeric',
+            'prefer-read-more-text'        => '',
+            'prefer-blog-exclude-category' => '',
+            'prefer-show-hide-share'       => 1,
+            'prefer-show-hide-category'    => 1,
+            'prefer-show-hide-date'        => 1,
+            'prefer-show-hide-author'      => 1,
 
             /*Single Page */
-            'prefer-single-page-featured-image' => 1,
-            'prefer-single-page-related-posts'  => 1,
+            'prefer-single-page-featured-image'      => 1,
+            'prefer-single-page-related-posts'       => 1,
             'prefer-single-page-related-posts-title' => esc_html__('You may like','prefer'),
-            'prefer-sidebar-single-page'=> 'single-right-sidebar',
-            'prefer-single-social-share' => 1,
-            'prefer-single-page-tags-option'=>0,
+            'prefer-sidebar-single-page'             => 'single-right-sidebar',
+            'prefer-single-social-share'             => 1,
+            'prefer-single-page-tags-option'         => 0,
 
             /*Sticky Sidebar*/
             'prefer-enable-sticky-sidebar' => 0,
 
             /*Footer Section*/
-            'prefer-footer-copyright'  => esc_html__('&#169; All Rights Reserved 2021','prefer'),
+            'prefer-footer-copyright' => esc_html__('&#169; All Rights Reserved 2021','prefer'),
 
             /*Breadcrumb Options*/
-            'prefer-extra-breadcrumb' => 1,
-            'prefer-breadcrumb-selection-option'=> 'theme-breadcrumb',
+            'prefer-extra-breadcrumb'            => 1,
+            'prefer-breadcrumb-selection-option' => 'theme-breadcrumb',
 
         );
 return apply_filters( 'prefer_default_theme_options_values', $default_theme_options );
@@ -89,19 +89,17 @@ endif;
  * @return array prefer_get_options_value
  *
  */
-if ( !function_exists('prefer_get_options_value') ) :
+if ( ! function_exists('prefer_get_options_value') ) {
     function prefer_get_options_value() {
         $prefer_default_theme_options_values = prefer_default_theme_options_values();
         $prefer_get_options_value = get_theme_mod( 'prefer_options');
         if( is_array( $prefer_get_options_value )){
-            return array_merge( $prefer_default_theme_options_values, $prefer_get_options_value );
-        }
-        else{
+            return wp_parse_args($prefer_get_options_value, $prefer_default_theme_options_values );
+        } else {
             return $prefer_default_theme_options_values;
         }
     }
-endif;
-
+}
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -111,7 +109,7 @@ function prefer_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	
+
     if ( isset( $wp_customize->selective_refresh ) ) {
       $wp_customize->selective_refresh->add_partial( 'blogname', array(
          'selector'        => '.site-title a',
