@@ -7,7 +7,7 @@
  * @package Prefer
  */
 
-if ( ! function_exists( 'prefer_setup' ) ) :
+if ( ! function_exists( 'prefer_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -16,6 +16,9 @@ if ( ! function_exists( 'prefer_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function prefer_setup() {
+		// Load theme options.
+		$GLOBALS['prefer_theme_options'] = prefer_get_options_value();
+
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -41,7 +44,7 @@ if ( ! function_exists( 'prefer_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		
+
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -136,23 +139,17 @@ if ( ! function_exists( 'prefer_setup' ) ) :
          *
          * @link https://developer.wordpress.org/reference/functions/add_image_size/
          */
-        
-        add_image_size('prefer-thumbnail-size', 800, 800, true); 
-        add_image_size('prefer-related-size', 600, 400, true); 
-        add_image_size('prefer-promo-post', 800, 500, true); 
-        add_image_size('prefer-related-post-thumbnails', 850, 550, true ); 
+
+        add_image_size('prefer-thumbnail-size', 800, 800, true);
+        add_image_size('prefer-related-size', 600, 400, true);
+        add_image_size('prefer-promo-post', 800, 500, true);
+        add_image_size('prefer-related-post-thumbnails', 850, 550, true );
 
 
         // Add support for Yoast SEO Breadcrumbs.
         add_theme_support( 'yoast-seo-breadcrumbs' );
-
-        /**
-        * Disable new widget screen
-        * @link https://developer.wordpress.org/block-editor/how-to-guides/widgets/overview/
-        */
-		remove_theme_support( 'widgets-block-editor' ); 
 	}
-endif;
+}
 add_action( 'after_setup_theme', 'prefer_setup' );
 
 /**
