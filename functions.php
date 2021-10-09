@@ -145,9 +145,14 @@ if ( ! function_exists( 'prefer_setup' ) ) {
         add_image_size('prefer-promo-post', 800, 500, true);
         add_image_size('prefer-related-post-thumbnails', 850, 550, true );
 
-
         // Add support for Yoast SEO Breadcrumbs.
         add_theme_support( 'yoast-seo-breadcrumbs' );
+
+        /**
+		 * Register theme support for Rank Math breadcrumbs
+		*/
+		add_theme_support( 'rank-math-breadcrumbs' );
+
 	}
 }
 add_action( 'after_setup_theme', 'prefer_setup' );
