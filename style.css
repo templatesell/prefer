@@ -4470,6 +4470,8 @@ article.masonry-post {
 }
 
 /* widget title */
+.widget_block h2,
+.widget .wp-block-group h2,
 .widget .widgettitle,
 .widget .widget-title {
     padding:0;
@@ -4522,6 +4524,8 @@ article.masonry-post {
     padding: 0;
 }
 
+.sidebar-3 .widget_block h2,
+.sidebar-3 .widget .wp-block-group h2,
 .sidebar-3 .widget-title {
     padding: 15px 0;
     border-bottom: 2px solid #d9d9d9;
@@ -4529,6 +4533,8 @@ article.masonry-post {
     background: none;
     position: relative;
 }
+.sidebar-3 .widget_block h2:after,
+.sidebar-3 .widget .wp-block-group h2:after,
 .sidebar-3 .widget-title:after {
     position: absolute;
     width: 60px;

@@ -38,6 +38,8 @@ if (!function_exists('prefer_dynamic_css')) :
             .meta_bottom .post-share a:hover,
             .tabs-nav li:before,
             .footer-wrap .widget-title:after,
+            .sidebar-3 .widget_block h2:after,
+            .sidebar-3 .widget .wp-block-group h2:after,
             .post-slider-section .s-cat,
             .sidebar-3 .widget-title:after,
             .bottom-caption .slick-current .slider-items span,
