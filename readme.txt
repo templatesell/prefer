@@ -32,7 +32,7 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
-= 1.1.7 - October 09 2021 =
+= 1.1.7 - November 01 2021 =
 * Fixed Undefined variable in slider
 * Fixed docs link url
 * Fixed widget issues
