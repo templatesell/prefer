@@ -32,6 +32,10 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.1.8 - January 25 2022 =
+* Fixed Copyright date
+* Tested with WP 5.9
+
 = 1.1.7 - November 01 2021 =
 * Fixed Undefined variable in slider
 * Fixed docs link url
