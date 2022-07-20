@@ -4,7 +4,7 @@ Contributors: templatesell
 Tags: grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets, custom-colors, custom-header, editor-style, rtl-language-support, theme-options, threaded-comments, blog, news
 Requires at least: 4.5
 Requires PHP: 5.2
-Tested up to: 5.8
+Tested up to: 6.0
 Stable tag: 1.0.0
 License: GNU General Prefer License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,9 @@ Prefer includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.1.9 - July 20 2022 =
+* Tested with WP 6.0
+
 = 1.1.8 - January 25 2022 =
 * Fixed Copyright date
 * Tested with WP 5.9
