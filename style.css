@@ -1907,9 +1907,9 @@ section.slider-wrapper {
     backface-visibility: hidden;
     opacity: 0;
     -webkit-transform: translate(0, 25px);
-    -moz-transform: translate(0, 25px)
-    -ms-transform: translate(0, 25px)
-    transform: translate(0, 25px)
+    -moz-transform: translate(0, 25px);
+    -ms-transform: translate(0, 25px);
+    transform: translate(0, 25px);
 }
 .modern-slider .slick-active .caption{
     -webkit-transform: translate(0px, 0px);
@@ -6179,9 +6179,6 @@ a.img-link {
     max-height: 200px;
     overflow: hidden;
 }
-.two-column .full-image .post-excerpt{
-
-}
 .hide-image .post-media{
     display: none;
 }
@@ -6395,10 +6392,6 @@ background: #fff;
 .promo-three .item .promo-content{
     padding:15px;
     background: #fff;
-}
-{
-    margin: 10px 0;
-    text-transform: uppercase;
 }
 .promo-three .post-category a{
     color: #EF9D87;
