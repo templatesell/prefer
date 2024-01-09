@@ -70,7 +70,7 @@ if ( !function_exists('prefer_default_theme_options_values') ) :
             'prefer-enable-sticky-sidebar' => 0,
 
             /*Footer Section*/
-            'prefer-footer-copyright' => esc_html__('&#169; All Rights Reserved 2022','prefer'),
+            'prefer-footer-copyright' => esc_html__('&#169; All Rights Reserved 2024','prefer'),
 
             /*Breadcrumb Options*/
             'prefer-extra-breadcrumb'            => 1,
