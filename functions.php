@@ -7,6 +7,13 @@
  * @package Prefer
  */
 
+/**
+ * Theme version, used to cache-bust enqueued assets.
+ */
+if ( ! defined( 'PREFER_VERSION' ) ) {
+	define( 'PREFER_VERSION', wp_get_theme( 'prefer' )->get( 'Version' ) );
+}
+
 if ( ! function_exists( 'prefer_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -152,6 +159,31 @@ if ( ! function_exists( 'prefer_setup' ) ) {
 		 * Register theme support for Rank Math breadcrumbs
 		*/
 		add_theme_support( 'rank-math-breadcrumbs' );
+
+		/*
+		 * style.css has carried the editor-style tag since the theme was
+		 * published without the theme ever calling add_editor_style(), so the
+		 * editor never picked up the theme typography.
+		 */
+		add_editor_style( 'css/editor-styles.css' );
+
+		/*
+		 * custom-background and align-wide were both advertised in the theme
+		 * tags without the theme ever registering them, so anyone filtering
+		 * for those features on WordPress.org got a theme that lacked them.
+		 */
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'prefer_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
+
+		add_theme_support( 'align-wide' );
 
 	}
 }

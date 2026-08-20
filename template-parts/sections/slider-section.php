@@ -15,6 +15,10 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
             'dots'              => false,
             'arrows'            => false,
         );
+
+        // The markup below read $slick_args_encoded, which was never assigned,
+        // so data-slick was always empty and Slick fell back to its defaults.
+        $slick_args_encoded = wp_json_encode( $slick_args );
       $args = array(
 			'posts_per_page' => 3,
 			'paged' => 1,
@@ -24,7 +28,7 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
 		$slider_query = new WP_Query($args);
 		if ($slider_query->have_posts()): ?>
     <div class="container">
-      <div class="modern-slider" data-slick='<?php echo isset( $slick_args_encoded ) ? $slick_args_encoded : ''; ?>'>
+      <div class="modern-slider" data-slick='<?php echo esc_attr( $slick_args_encoded ); ?>'>
 				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); 
           if(has_post_thumbnail()){
           $image_id = get_post_thumbnail_id();
@@ -52,7 +56,7 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
                     <div class="inner-wrapper">
               		    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                       <div class="btn-wrapper">
-                        <a class="more-btn" href="<?php the_permalink(); ?>"><?php _e('Continue Reading', 'prefer'); ?></a>
+                        <a class="more-btn" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Continue Reading', 'prefer' ); ?></a>
                       </div>
                   </div>
             	</div>

@@ -292,7 +292,8 @@ class Prefer_Breadcrumb_Trail {
         if ( false === $this->args['echo'] )
             return $breadcrumb;
 
-        echo $breadcrumb;
+        // Assembled above from esc_url/esc_html parts; kses keeps the markup.
+        echo wp_kses_post( $breadcrumb );
     }
 
     /* ====== Protected Methods ====== */

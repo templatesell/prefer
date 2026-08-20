@@ -91,7 +91,7 @@ final class Prefer_Customize {
 	 * @return void
 	 */
 	public function enqueue_control_scripts() {
-		wp_enqueue_script( 'prefer-customize-controls', trailingslashit( get_template_directory_uri() ) . '/templatesell/upgrade/customize-controls.js', array( 'customize-controls' ) );
+		wp_enqueue_script( 'prefer-customize-controls', trailingslashit( get_template_directory_uri() ) . 'templatesell/upgrade/customize-controls.js', array( 'customize-controls' ), PREFER_VERSION, true );
 	}
 }
 
