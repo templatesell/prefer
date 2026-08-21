@@ -1,6 +1,8 @@
 === Prefer ===
 
 Contributors: templatesell
+Theme URI: https://www.templatesell.com/item/prefer-grid-layout-wordpress-theme/
+Author URI: https://www.templatesell.com/
 Tags: grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, translation-ready, footer-widgets, custom-colors, custom-header, editor-style, rtl-language-support, theme-options, threaded-comments, blog, news
 Requires at least: 6.0
 Requires PHP: 7.4
