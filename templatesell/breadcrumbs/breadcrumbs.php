@@ -251,7 +251,7 @@ class Prefer_Breadcrumb_Trail {
 
                 $item = ! empty( $matches )
                     ? preg_replace( '/(<a.*?)([\'"])>/i', '$1$2 itemprop=$2item$2>', $item )
-                    : sprintf( '<a href="'.esc_url( $link_item ).'" itemprop="item">%s</a>', $item );
+                    : sprintf( '<a href="%1$s" itemprop="item">%2$s</a>', esc_url( $link_item ), $item );
 
                 // Add list item classes.
                 $item_class = 'trail-item';
@@ -292,7 +292,8 @@ class Prefer_Breadcrumb_Trail {
         if ( false === $this->args['echo'] )
             return $breadcrumb;
 
-        echo $breadcrumb;
+        // Assembled above from esc_url/esc_html parts; kses keeps the markup.
+        echo wp_kses_post( $breadcrumb );
     }
 
     /* ====== Protected Methods ====== */

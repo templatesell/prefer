@@ -31,7 +31,7 @@ if (!function_exists('prefer_related_post')) :
                 ?>
                 <div class="related-posts clearfix">
                     <h2 class="widget-title">
-                        <?php echo $title; ?>
+                        <?php echo esc_html( $title ); ?>
                     </h2>
                     <div class="related-posts-list">
                         <?php

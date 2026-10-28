@@ -108,7 +108,7 @@ $mobile_menu_type = esc_attr($prefer_theme_options['prefer_mobile_menu_option'])
 				$prefer_description = get_bloginfo( 'description', 'display' );
 				if ( $prefer_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"><?php echo $prefer_description; /* WPCS: xss ok. */ ?></p>
+					<p class="site-description"><?php echo wp_kses_post( $prefer_description ); ?></p>
 				<?php endif; ?>
 			</div><!-- .site-logo -->
 		</div>
@@ -134,7 +134,7 @@ $mobile_menu_type = esc_attr($prefer_theme_options['prefer_mobile_menu_option'])
 					<?php if($mobile_menu_type == 'menu-icon'){ ?>
 						<span class="berger"><span></span></span>
 						<?php }else{ ?>
-						<span><?php echo $menu_text_mobile; ?></span>
+						<span><?php echo esc_html( $menu_text_mobile ); ?></span>
 					<?php } ?>
 				</button>
 

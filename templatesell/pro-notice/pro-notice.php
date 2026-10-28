@@ -15,9 +15,9 @@ defined( 'ABSPATH' ) || exit;
 class Prefer_Theme_Notice {
 
 	/**
-	 * Currently active theme in the site.
+	 * Name of the currently active theme, or of its parent for a child theme.
 	 *
-	 * @var \WP_Theme
+	 * @var string
 	 */
 	protected $active_theme;
 
@@ -62,7 +62,9 @@ class Prefer_Theme_Notice {
 
 		global $current_user;
 		$this->current_user_data = $current_user;
-		$this->active_theme      = wp_get_theme();
+		// Always a string: the other branch already assigns a name, so leaving a
+		// WP_Theme object here made the property's type depend on the site setup.
+		$this->active_theme      = wp_get_theme()->get( 'Name' );
 
 		// In case user is using child theme, we need to show `Upgrade To Pro` notice too.
 		if ( is_child_theme() ) {
@@ -123,13 +125,21 @@ class Prefer_Theme_Notice {
 				$pro_link = '<a target="_blank" href=" ' . esc_url( $theme_lists[ $current_theme ] ) . ' ">' . esc_html__( 'upgrade to pro', 'prefer' ) . '</a>';
 
 				printf(
+					/* translators: 1: current user display name, 2: active theme name, 3: link to the pro theme, 4: coupon code. */
 					esc_html__(
-						/* Translators: %1$s current user display name., %2$s Currently activated theme., %3$s Pro theme link., %4$s Coupon code. */
 						'Howdy, %1$s! You\'ve been using %2$s theme for a while now, and we hope you\'re happy with it. If you need more options and access to the premium features, you can %3$s. Also, you can use the coupon code %4$s to get 20 percent discount while making the purchase. Enjoy!', 'prefer'
 					),
 					'<strong>' . esc_html( $this->current_user_data->display_name ) . '</strong>',
-					$this->active_theme,
-					$pro_link,
+					esc_html( $this->active_theme ),
+					wp_kses(
+						$pro_link,
+						array(
+							'a' => array(
+								'href'   => array(),
+								'target' => array(),
+							),
+						)
+					),
 					'<code>TScare20</code>'
 				);
 				?>
@@ -142,7 +152,7 @@ class Prefer_Theme_Notice {
 					<span><?php esc_html_e( 'Upgrade To Pro', 'prefer' ); ?></span>
 				</a>
 
-				<a href="?prefer_nag_pro_theme_notice_partial_ignore=1" class="btn button-secondary">
+				<a href="<?php echo esc_url( self::dismiss_url( 'prefer_nag_pro_theme_notice_partial_ignore' ) ); ?>" class="btn button-secondary">
 					<span class="dashicons dashicons-calendar-alt"></span>
 					<span><?php esc_html_e( 'Maybe later', 'prefer' ); ?></span>
 				</a>
@@ -154,7 +164,7 @@ class Prefer_Theme_Notice {
 				</a>
 			</div>
 
-			<a class="notice-dismiss" href="?prefer_nag_pro_theme_notice_ignore=1"></a>
+			<a class="notice-dismiss" href="<?php echo esc_url( self::dismiss_url( 'prefer_nag_pro_theme_notice_ignore' ) ); ?>"></a>
 		</div>
 
 		<?php
@@ -163,12 +173,48 @@ class Prefer_Theme_Notice {
 	/**
 	 * Set the nag for partially ignored users.
 	 */
+	/**
+	 * Build a nonce protected dismissal URL.
+	 *
+	 * @param string $action Query argument, also used as the nonce action.
+	 * @return string
+	 */
+	public static function dismiss_url( $action ) {
+
+		return wp_nonce_url(
+			add_query_arg( $action, '1' ),
+			$action,
+			'prefer_pro_notice_nonce'
+		);
+	}
+
+	/**
+	 * Decide whether a dismissal request is genuine.
+	 *
+	 * These handlers write user meta straight from a GET parameter, so without a
+	 * nonce any page could dismiss the notice on a logged-in admin's behalf.
+	 *
+	 * @param string $action Query argument, also used as the nonce action.
+	 * @return bool
+	 */
+	private function is_valid_dismissal( $action ) {
+
+		if ( ! isset( $_GET[ $action ] ) || '1' !== $_GET[ $action ] ) {
+			return false;
+		}
+
+		if ( ! is_user_logged_in() || ! current_user_can( 'edit_theme_options' ) ) {
+			return false;
+		}
+
+		return isset( $_GET['prefer_pro_notice_nonce'] )
+			&& wp_verify_nonce( sanitize_key( wp_unslash( $_GET['prefer_pro_notice_nonce'] ) ), $action );
+	}
+
 	public function pro_theme_notice_partial_ignore() {
 
-		$user_id = $this->current_user_data->ID;
-
-		if ( isset( $_GET['prefer_nag_pro_theme_notice_partial_ignore'] ) && '1' == $_GET['prefer_nag_pro_theme_notice_partial_ignore'] ) {
-			update_user_meta( $user_id, 'prefer_nag_pro_theme_notice_partial_ignore', time() );
+		if ( $this->is_valid_dismissal( 'prefer_nag_pro_theme_notice_partial_ignore' ) ) {
+			update_user_meta( $this->current_user_data->ID, 'prefer_nag_pro_theme_notice_partial_ignore', time() );
 		}
 
 	}
@@ -178,10 +224,8 @@ class Prefer_Theme_Notice {
 	 */
 	public function pro_theme_notice_ignore() {
 
-		$user_id = $this->current_user_data->ID;
-
-		if ( isset( $_GET['prefer_nag_pro_theme_notice_ignore'] ) && '1' == $_GET['prefer_nag_pro_theme_notice_ignore'] ) {
-			update_user_meta( $user_id, 'prefer_nag_pro_theme_notice_ignore', time() );
+		if ( $this->is_valid_dismissal( 'prefer_nag_pro_theme_notice_ignore' ) ) {
+			update_user_meta( $this->current_user_data->ID, 'prefer_nag_pro_theme_notice_ignore', time() );
 		}
 
 	}

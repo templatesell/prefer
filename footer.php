@@ -55,7 +55,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 				if ( is_active_sidebar( 'footer-' . $i ) )
 				{
 					?>
-					<div class="footer-col-<?php echo $footer_col; ?>">
+					<div class="footer-col-<?php echo absint( $footer_col ); ?>">
 						<div class="footer-top-box wow fadeInUp">
 							<?php dynamic_sidebar( 'footer-' . $i ); ?>
 						</div>
@@ -71,7 +71,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
 			<div class="row">
 				<div class="col-sm-2 col-md-12">
 					<div class="copyright">
-						<?php echo $copyright; ?>
+						<?php echo wp_kses_post( $copyright ); ?>
 						<?php
 							/* translators: 1: Theme name, 2: Theme author. */
 							printf( esc_html__( 'Theme: %1$s by %2$s.', 'prefer' ), 'Prefer', '<a href="http://www.templatesell.com/">Template Sell</a>' );

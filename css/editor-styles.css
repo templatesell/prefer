@@ -1,3 +1,86 @@
+/**
+ * Editor styles.
+ *
+ * style.css has carried the editor-style tag since the theme was published, but
+ * the theme never called add_editor_style(), so the classic editor rendered in
+ * the default admin typography and the writing view did not resemble the front
+ * end at all. These rules mirror the front-end type scale.
+ *
+ * Muli and Josefin Sans are bundled with the theme; see assets/fonts/fonts.css.
+ */
+
 .wp-block {
-	max-width: 780px !important;
+	max-width: 780px;
+}
+
+.wp-block[data-align="wide"] {
+	max-width: 1080px;
+}
+
+body,
+.editor-styles-wrapper {
+	font-family: 'Muli', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: 16px;
+	line-height: 1.8;
+	color: #55575a;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
+.editor-post-title__block .editor-post-title__input {
+	font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	color: #111111;
+	line-height: 1.3;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-size: 36px;
+	font-weight: 700;
+}
+
+.editor-styles-wrapper h1 {
+	font-size: 34px;
+}
+
+.editor-styles-wrapper h2 {
+	font-size: 28px;
+}
+
+.editor-styles-wrapper h3 {
+	font-size: 22px;
+}
+
+.editor-styles-wrapper h4 {
+	font-size: 19px;
+}
+
+.editor-styles-wrapper h5 {
+	font-size: 17px;
+}
+
+.editor-styles-wrapper h6 {
+	font-size: 15px;
+}
+
+.editor-styles-wrapper a {
+	color: #b3512c;
+}
+
+/* Matches the front-end blockquote, which uses Playfair Display. */
+.editor-styles-wrapper blockquote {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 18px;
+	line-height: 1.65;
+	padding: 0 0 0 30px;
+	border-left: 3px solid #e5e5e5;
+}
+
+.editor-styles-wrapper code,
+.editor-styles-wrapper pre {
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-size: 14px;
 }

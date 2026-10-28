@@ -39,11 +39,11 @@ if (!class_exists('Prefer_Featured_Post')) :
         {
             $instance = wp_parse_args( (array) $instance, $this->defaults() );
             $title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
-            echo $args['before_widget'];
+            echo wp_kses_post( $args['before_widget'] );
 
 
             if (!empty($title)) {
-                echo $args['before_title'] . esc_html( $title ) . $args['after_title'];
+                echo wp_kses_post( $args['before_title'] ) . esc_html( $title ) . wp_kses_post( $args['after_title'] );
             }
             $cat_id = !empty($instance['cat']) ? $instance['cat'] : '';
 
@@ -80,7 +80,7 @@ if (!class_exists('Prefer_Featured_Post')) :
                             }
                             ?>
                         </figure>
-                        <span class="widget_featured_post_num"><?php echo $i; ?></span>
+                        <span class="widget_featured_post_num"><?php echo absint( $i ); ?></span>
                         <div class="widget_featured_content">
                                 <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 <div class="post-date">
@@ -98,7 +98,7 @@ if (!class_exists('Prefer_Featured_Post')) :
             endif; ?></ul><?php
 
 
-            echo $args['after_widget'];
+            echo wp_kses_post( $args['after_widget'] );
 
         }
 
