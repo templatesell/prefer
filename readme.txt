@@ -35,26 +35,25 @@ Prefer includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 = 1.1.11 - August 20 2026 =
-* Fixed - Fatal error on pages with non-ASCII permalinks. Percent-encoded characters in a URL were read as sprintf() format specifiers, which threw an uncaught ArgumentCountError on PHP 8 and returned a 500 for the whole page.
-* Fixed - The featured slider never received its configuration. The markup read a variable that was never assigned, so data-slick was always empty and Slick fell back to its own defaults.
-* Fixed - The View More pagination button sent the literal text "esc_attr($output_page)" as its page number, because the escaping call sat inside a quoted string.
-* Fixed - The licence in style.css and readme.txt read "GNU General Prefer License", the result of a find and replace that caught the licence statement.
-* Fixed - Stable tag said 1.0.0 while the theme was at 1.1.10, and threaded-comments was listed twice in the tags.
-* Fixed - A stray echo inside a pre_get_posts filter, which risked sending output before the headers.
-* Fixed - The widget script passed true where wp_register_script() expects a version, so it was versioned "1" and never moved to the footer.
-* Fixed - Blockquotes referenced Playfair Display and the mobile menu referenced Roboto; neither was ever loaded, so both fell back to generic system fonts. Playfair Display is now bundled and the mobile menu uses the theme's own body font.
-* Security - Added nonce and capability checks to the Upgrade To Pro notice dismissal, which previously wrote user meta straight from a GET parameter.
-* Security - Escaped all remaining theme output, including the Customizer category control and the social sharing links.
-* Changed - Google Fonts are now bundled with the theme instead of being requested from fonts.googleapis.com on every page view, so no visitor data is sent to a third party.
-* Changed - Typography. Body copy and headings shared a line-height of 1.5, which was tight for 16px body text and loose for a 29px heading. Body copy is now 1.75 and headings 1.25, headings gained a little negative tracking, the top of the size scale was opened up so h1 reads clearly larger than h3, and font smoothing is enabled.
-* Accessibility - Darkened the muted grey used for post meta from #989ea6 to #70757b, raising it from 2.7:1 to 4.65:1 against white.
-* Accessibility - The primary colour #EF9D87 measured 2.13:1 against white and was used for link hover and focus states, post dates and tag links, so hovering a link made it harder to read. The default is now #ce461d at 4.65:1, which is the lightest colour on the same hue that meets WCAG AA. The old value can be restored in Customizer > Colors.
-* Accessibility - Removed the blanket "outline: none !important" on links, which prevented child themes and plugins from providing focus indicators.
-* Added - Block patterns and block styles, and add_editor_style() so the editor-style tag the theme has always advertised is finally backed by real editor styles.
-* Added - Recommended plugins notice for the free Template Sell plugins. Nothing is bundled or installed automatically.
-* Added - languages/prefer.pot so the theme can be translated.
-* Changed - Every enqueued asset now carries the theme version instead of the copied 4.5.0 and 4.6.0 strings, and render-blocking scripts were moved to the footer.
-* Changed - Requires PHP raised to 7.4 and Requires at least set to 6.0.
+* Fixed: fatal error on pages with non-ASCII permalinks (PHP 8).
+* Fixed: featured slider config was never output.
+* Fixed: View More pagination button sent the wrong page number.
+* Fixed: license name in style.css and readme.txt.
+* Fixed: stable tag and duplicate threaded-comments tag.
+* Fixed: stray echo in pre_get_posts filter.
+* Fixed: widget script version and footer loading.
+* Fixed: fonts used in blockquotes and mobile menu were never loaded.
+* Security: nonce and capability checks on the Upgrade To Pro notice dismissal.
+* Security: escaped remaining theme output.
+* Changed: Google Fonts are now bundled with the theme.
+* Changed: line-height, heading sizes and font smoothing.
+* Changed: assets use the theme version; scripts load in the footer.
+* Changed: requires PHP 7.4 and WordPress 6.0.
+* Accessibility: darker meta text and primary color for better contrast.
+* Accessibility: removed outline none on links.
+* Added: block patterns, block styles and editor styles.
+* Added: recommended plugins notice.
+* Added: languages/prefer.pot.
 * Tested with WP 7.1
 
 = 1.1.10 - January 09 2024 =

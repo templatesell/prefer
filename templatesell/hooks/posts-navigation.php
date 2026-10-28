@@ -24,8 +24,6 @@ if (!function_exists('prefer_posts_navigation')) :
             } else {
                 $output_page = $page_number + 1;
             }
-            // esc_attr() used to sit inside the quoted string, so the literal
-            // text "esc_attr($output_page)" was emitted as the page number.
             printf(
                 '<div class="ajax-pagination text-center"><div class="show-more" data-number="%1$s"><i class="fa fa-refresh"></i>%2$s</div><div id="free-temp-post"></div></div>',
                 esc_attr( $output_page ),

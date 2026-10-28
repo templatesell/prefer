@@ -35,7 +35,6 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    /* 1.5 was too tight for 16px body copy; 1.75 is a comfortable measure. */
     line-height: 1.75;
     color: #4c4f53;
     -webkit-font-smoothing: antialiased;
@@ -69,14 +68,10 @@ h3,
 h4,
 h5,
 h6 {
-    /* Margin follows the font size so every level keeps the same rhythm. */
     margin: 0 0 0.6em;
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
-    /* Headings shared the body's 1.5, which left multi-line headings
-       looking disconnected. Josefin Sans is geometric, so a touch of
-       negative tracking keeps the caps from feeling loose. */
     line-height: 1.25;
     letter-spacing: -0.01em;
     color: #000000;
@@ -7745,9 +7740,7 @@ display: inline-block;
 /*==============================================================
 ## Block styles
 
-Backing CSS for the styles registered in
-templatesell/block-patterns.php. Without these the options appear in
-the editor and do nothing.
+Backing CSS for the styles in templatesell/block-patterns.php.
 ==============================================================*/
 
 .wp-block-quote.is-style-prefer-bordered {

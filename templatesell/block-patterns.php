@@ -2,11 +2,6 @@
 /**
  * Block patterns and block styles.
  *
- * The WordPress.org theme review flags themes that register neither, and the
- * theme shipped with no patterns of its own. These use the theme's own
- * typography and its primary colour so they look like part of the design
- * rather than generic core blocks.
- *
  * @package Prefer
  */
 

@@ -5,13 +5,7 @@
 function prefer_scripts() {
 	global $prefer_theme_options, $wp_query;
 
-    /*
-     * Muli, Josefin Sans and Monsieur La Doulaise are bundled with the theme.
-     * They used to be requested from fonts.googleapis.com on every page view,
-     * which sent each visitor IP address to Google without consent. The local
-     * stylesheet keeps each face unicode-range, so browsers still download
-     * only the subsets a page actually needs.
-     */
+    // Locally hosted webfonts.
     wp_enqueue_style( 'prefer-fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', array(), PREFER_VERSION );
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.5.0' );
     wp_enqueue_style( 'grid-css', get_template_directory_uri() . '/css/grid.min.css', array(), PREFER_VERSION );

@@ -15,13 +15,7 @@ if (!function_exists('prefer_social_sharing')) :
         $prefer_image = get_the_post_thumbnail_url($post_id);
         
         //sharing url
-        /*
-         * Built unescaped here and escaped once at output. esc_url() rewrites
-         * & as &#038;, so escaping at both ends would double-encode the query
-         * string and break the share links.
-         *
-         * The share endpoints are https now; the http:// versions only redirect.
-         */
+        // Escaped once at output; esc_url() would double-encode the query string.
         $prefer_twitter_sharing_url   = 'https://twitter.com/share?text=' . $prefer_title . '&url=' . $prefer_url;
         $prefer_facebook_sharing_url  = 'https://www.facebook.com/sharer/sharer.php?u=' . $prefer_url;
         $prefer_pinterest_sharing_url = 'https://pinterest.com/pin/create/button/?url=' . $prefer_url . '&media=' . $prefer_image . '&description=' . $prefer_title;

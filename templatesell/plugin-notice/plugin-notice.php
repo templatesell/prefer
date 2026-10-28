@@ -2,11 +2,6 @@
 /**
  * Recommended plugins notice.
  *
- * Everything listed here is hosted on WordPress.org and entirely optional - the
- * theme is fully functional without any of it. Nothing is bundled and nothing is
- * installed on the user's behalf; the links below hand off to core's own plugin
- * installer, behind a capability check and a nonce.
- *
  * @package Prefer
  */
 
@@ -16,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'prefer_recommended_plugins' ) ) :
 	/**
-	 * The plugins worth suggesting, in the order they are shown.
+	 * Recommended plugins, in display order.
 	 *
 	 * @return array[] Each entry has a slug, the main plugin file and a display name.
 	 */
@@ -51,8 +46,7 @@ if ( ! function_exists( 'prefer_missing_recommended_plugins' ) ) :
 	/**
 	 * List the recommended plugins that are not active yet.
 	 *
-	 * @return array[] Subset of prefer_recommended_plugins(), each with an added
-	 *                 'installed' flag so the notice can offer the right action.
+	 * @return array[] Subset of prefer_recommended_plugins(), each with an added 'installed' flag.
 	 */
 	function prefer_missing_recommended_plugins() {
 
@@ -79,8 +73,6 @@ endif;
 if ( ! function_exists( 'prefer_plugin_action_url' ) ) :
 	/**
 	 * Build the install or activate URL for one recommended plugin.
-	 *
-	 * Both are core screens, nonced the way core nonces them.
 	 *
 	 * @param array $plugin One entry from prefer_recommended_plugins().
 	 * @return string Admin URL, or an empty string if the user cannot act on it.
@@ -129,7 +121,7 @@ if ( ! function_exists( 'prefer_plugin_notice' ) ) :
 			return;
 		}
 
-		// Use the active theme's own name, so child themes read correctly too.
+		// Active theme name, so child themes read correctly.
 		$theme_name = wp_get_theme()->get( 'Name' );
 
 		$names = array();

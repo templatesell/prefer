@@ -160,18 +160,10 @@ if ( ! function_exists( 'prefer_setup' ) ) {
 		*/
 		add_theme_support( 'rank-math-breadcrumbs' );
 
-		/*
-		 * style.css has carried the editor-style tag since the theme was
-		 * published without the theme ever calling add_editor_style(), so the
-		 * editor never picked up the theme typography.
-		 */
+		// Editor styles.
 		add_editor_style( 'css/editor-styles.css' );
 
-		/*
-		 * custom-background and align-wide were both advertised in the theme
-		 * tags without the theme ever registering them, so anyone filtering
-		 * for those features on WordPress.org got a theme that lacked them.
-		 */
+		// Features listed in the theme tags.
 		add_theme_support(
 			'custom-background',
 			apply_filters(

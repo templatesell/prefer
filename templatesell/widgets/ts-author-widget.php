@@ -356,8 +356,6 @@ endif;
 add_action('admin_enqueue_scripts', 'prefer_widgets_backend_enqueue');
 function prefer_widgets_backend_enqueue()
 {
-    // true used to sit in the $ver slot, so the script was versioned "1"
-    // and never actually moved to the footer.
     wp_register_script( 'prefer-custom-widgets', get_template_directory_uri() . '/assets/js/widgets.js', array( 'jquery' ), PREFER_VERSION, true );
     
     wp_enqueue_media();

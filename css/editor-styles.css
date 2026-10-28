@@ -1,12 +1,7 @@
 /**
  * Editor styles.
  *
- * style.css has carried the editor-style tag since the theme was published, but
- * the theme never called add_editor_style(), so the classic editor rendered in
- * the default admin typography and the writing view did not resemble the front
- * end at all. These rules mirror the front-end type scale.
- *
- * Muli and Josefin Sans are bundled with the theme; see assets/fonts/fonts.css.
+ * Mirrors the front-end type scale. Fonts are in assets/fonts/fonts.css.
  */
 
 .wp-block {
@@ -70,7 +65,7 @@ body,
 	color: #b3512c;
 }
 
-/* Matches the front-end blockquote, which uses Playfair Display. */
+/* Blockquote */
 .editor-styles-wrapper blockquote {
 	font-family: 'Playfair Display', Georgia, serif;
 	font-size: 18px;

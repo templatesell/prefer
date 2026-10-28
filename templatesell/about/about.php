@@ -15,7 +15,7 @@ add_action( 'admin_menu', 'prefer_menu' );
  * Enqueue styles for the help page.
  */
 function prefer_admin_scripts( $hook ) {
-	// Was loading on every admin screen; it is only needed on the theme page.
+	// Theme page only.
 	if ( 'toplevel_page_prefer-theme' !== $hook ) {
 		return;
 	}

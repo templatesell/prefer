@@ -26,11 +26,7 @@ if ( ! function_exists( 'prefer_posted_on' ) ) :
 	$posted_on = 
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-        // $byline was assembled here and never used; prefer_posted_by() below
-        // is what actually renders the author.
-        // $posted_on is assembled above from esc_url/esc_attr/esc_html parts;
-        // kses keeps
-        // the <time> and <a rel="bookmark"> markup intact.
+        // $posted_on is built from escaped parts; kses keeps the markup.
         echo '<span class="posted-on">' . wp_kses_post( $posted_on ) . '</span>';
 	}
 endif;
@@ -77,10 +73,6 @@ if (!function_exists('prefer_meta_tags')) :
         $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'prefer' ) );
         if ( $tags_list ) {
             /* translators: 1: list of tags. */
-            // esc_html() takes one argument, so the text domain here was
-            // silently discarded, and the format string has nothing to
-            // translate anyway. get_the_tag_list() returns markup, so the
-            // list itself goes through kses.
             printf(
                 '<div class="entry-meta entry-meta-footer"> <span class="tags-links"><i class="fa fa-tag"></i> %1$s</span></div>',
                 wp_kses_post( $tags_list )

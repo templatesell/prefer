@@ -16,8 +16,6 @@ $slide_id = absint($prefer_theme_options['prefer-select-category']);
             'arrows'            => false,
         );
 
-        // The markup below read $slick_args_encoded, which was never assigned,
-        // so data-slick was always empty and Slick fell back to its defaults.
         $slick_args_encoded = wp_json_encode( $slick_args );
       $args = array(
 			'posts_per_page' => 3,
